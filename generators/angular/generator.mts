@@ -335,33 +335,32 @@ export default class AngularGenerator extends BaseApplicationGenerator {
     return getTestEntityId(primaryKey, index, wrapped);
   }
 
-    /**
+  /**
    * @private
    * Generate Entity Client Field Default Values
    *
    * @param {Array|Object} fields - array of fields
    * @returns {Array} defaultVariablesValues
    */
-    generateEntityClientFieldDefaultValues(fields) {
-      const defaultVariablesValues = {};
-      fields.forEach(field => {
-        const fieldType = field.fieldType;
-        const fieldName = field.fieldName;
-        if (fieldType === TYPE_BOOLEAN) {
-          defaultVariablesValues[fieldName] = `${fieldName}: false,`;
-        }
-      });
-      return defaultVariablesValues;
-    }
-  
-    generateEntityClientFields(primaryKey, fields, relationships, dto, customDateType = 'dayjs.Dayjs', embedded = false) {
-      return getHydratedEntityClientFields(primaryKey, fields, relationships, dto, customDateType, embedded, ANGULAR);
-    }
-  
-    generateEntityClientImports(relationships, dto) {
-      return formatEntityClientImports(relationships, dto, ANGULAR);
-    }
+  generateEntityClientFieldDefaultValues(fields) {
+    const defaultVariablesValues = {};
+    fields.forEach(field => {
+      const fieldType = field.fieldType;
+      const fieldName = field.fieldName;
+      if (fieldType === TYPE_BOOLEAN) {
+        defaultVariablesValues[fieldName] = `${fieldName}: false,`;
+      }
+    });
+    return defaultVariablesValues;
+  }
 
+  generateEntityClientFields(primaryKey, fields, relationships, dto, customDateType = 'dayjs.Dayjs', embedded = false) {
+    return getHydratedEntityClientFields(primaryKey, fields, relationships, dto, customDateType, embedded, ANGULAR);
+  }
+
+  generateEntityClientImports(relationships, dto) {
+    return formatEntityClientImports(relationships, dto, ANGULAR);
+  }
 
   /**
    * @private
