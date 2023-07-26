@@ -19,12 +19,12 @@
 import chalk from 'chalk';
 import { packageJson } from '../lib/index.mjs';
 
-export default `${chalk.green('        ██╗')}${chalk.red(' ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗')}
-${chalk.green('        ██║')}${chalk.red(' ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗')}
-${chalk.green('        ██║')}${chalk.red(' ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝')}
-${chalk.green('  ██╗   ██║')}${chalk.red(' ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║')}
-${chalk.green('  ╚██████╔╝')}${chalk.red(' ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗')}
-${chalk.green('   ╚═════╝ ')}${chalk.red(' ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝')}
+export default `${chalk.blue('  ████████╗')}${chalk.blue('████████╗ ████████╗ ███████╗ ')}
+${chalk.blue('  ╚══██╔══╝')}${chalk.blue('╚══██╔══╝ ██╔═════╝ ██╔═══██╗')}
+${chalk.blue('     ██║   ')}${chalk.blue('   ██║    ██████╗   ███████╔╝')}
+${chalk.blue('     ██║   ')}${chalk.blue('   ██║    ██╔═══╝   ██╔══██║ ')}
+${chalk.blue('  ████████╗')}${chalk.blue('   ██║    ████████╗ ██║  ╚██╗')}
+${chalk.blue('  ╚═══════╝')}${chalk.blue('   ╚═╝    ╚═══════╝ ╚═╝   ╚═╝')}
                             https://www.jhipster.tech
 ${chalk.white('Welcome to JHipster')} ${chalk.yellow(`v${packageJson.version}`)}
 `;
